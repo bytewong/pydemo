@@ -1,0 +1,24 @@
+syntax = "proto3";
+package proto;
+
+
+service RegisterData {
+  rpc DoRegister(actionrequest) returns (actionresponse){}
+  rpc checkToken(actiontoken) returns (actionresult){}
+}
+
+message actionrequest {
+  string info = 1;
+}
+
+message actionresponse{
+  string text = 1;
+}
+
+message actiontoken{
+  string token = 1;    
+}
+
+message actionresult{
+  string result = 1;    
+}
